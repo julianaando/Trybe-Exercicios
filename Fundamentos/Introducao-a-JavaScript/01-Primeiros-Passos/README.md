@@ -1,11 +1,22 @@
-Exercício 1
+Exercício 4
 
-- Crie uma constante chamada myName e atribua a ela o seu nome (Exemplo: Carolina).
-- Crie uma constante chamada birthCity e atribua a ela a sua cidade natal.
-- Crie uma variável let chamada birthYear e atribua a ela o ano em que você nasceu.
+#### Operador &&
 
-Utilize o console.log() para imprimir as constantes e variáveis que você criou.
+-Crie uma constante chamada “currentHour”, que receba um número entre 4 e 24 de sua escolha, para representar as horas do dia.
+-Crie uma variável chamada “message” que, inicialmente, é uma string vazia.
 
-- Altere o valor atribuído à variável birthYear para 2030. Faça um console.log(birthYear) novamente para ver o que acontece!
-- Altere o valor atribuído à constante birthCity. Faça um console.log(birthCity) novamente! Você saberia explicar por que recebemos uma mensagem de erro? 🤔
-  R: O erro ocorre, pois não é possível dar outro valor para uma constante, diferente do 'let', que permite essas alterações.
+- Implemente condicionais para que:
+  . Se o horário for maior ou igual a 22, insira “Não deveríamos comer nada, é hora de dormir” na variável “message”.
+  . Se o horário for maior ou igual a 18 e menor que 22, insira “Rango da noite, vamos jantar :D” na variável “message”.
+  . Se o horário for maior ou igual a 14 e menor que 18, insira “Vamos fazer um bolo pro café da tarde?” na variável “message”.
+  . Se o horário estiver entre 11 e 14, insira “Hora do almoço!!!” na variável “message”.
+  . Se o horário estiver entre 4 e 11, insira “Hmmm, cheiro de café recém-passado” na variável “message”.
+- Agora imprima a variável message fora das suas condições.
+
+### Operador ||
+
+- Crie uma variável chamada “weekDay” que receba a string “quarta-feira”.
+- Utilizando if/else, implemente condicionais para que:
+  . Se nossa variável “weekDay” for “segunda-feira”, “terça-feira”, “quarta-feira”, “quinta-feira” ou “sexta-feira”, imprima “Oba, mais um dia de aprendizado na Trybe >:D”.
+  . Se for algum dia de fim de semana, imprima “FINALMENTE, descanso merecido UwU”.
+- Experimente trocar o valor da string ou até mesmo montar seu próprio algoritmo. Esse assunto é muito importante para seu aprendizado :).
