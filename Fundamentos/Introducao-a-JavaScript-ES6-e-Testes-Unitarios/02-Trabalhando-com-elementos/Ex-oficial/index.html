@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Exercício</title>
+  <style>
+    section {
+      border-color: black;
+      border-style: solid;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .main-content {
+      background-color: yellow;
+    }
+
+    .main-content .center-content {
+      background-color: red;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .main-content .center-content p {
+      font-style: italic;
+    }
+
+    .main-content .left-content {
+      background-color: green;
+      width: 60%;
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    .main-content .left-content .small-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 100%;
+    }
+
+    .main-content .right-content {
+      background-color: blue;
+      width: 60%;
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .main-content .description {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    const titulo = document.createElement('h1');
+    titulo.innerHTML = 'Exercício - JavaScript DOM';
+    titulo.className = 'title';
+    document.body.appendChild(titulo);
+
+    const principal = document.createElement('main');
+    principal.style.backgroundColor = 'green';
+    document.body.appendChild(principal).className = 'main-content';
+
+    const section1 = document.createElement('section');
+    section1.className = 'center-content';
+
+    principal.appendChild(section1);
+
+    const paragrafo = document.createElement('p');
+    paragrafo.innerHTML = 'Esse é o primeiro parágrafo';
+    section1.appendChild(paragrafo);
+
+    const section2 = document.createElement('section');
+    section2.className = 'left-content';
+    principal.appendChild(section2);
+
+    const section3 = document.createElement('section');
+    section3.className = 'right-content';
+    section3.style.marginRight = 'auto';
+    principal.appendChild(section3);
+
+    const imagem = document.createElement('img');
+    imagem.src = 'https://picsum.photos/200';
+    imagem.className = 'small-image';
+    section2.appendChild(imagem);
+
+    const lista = document.createElement('ul');
+    section3.appendChild(lista);
+    const array = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+    for (let i in array) {
+      const elementLi = document.createElement('li');
+      elementLi.innerHTML = array[i]
+      lista.appendChild(elementLi);
+    }
+    for (i = 0; i <= 1; i += 1) {
+      lista.removeChild(lista.lastChild);
+    }
+
+
+    for (let i = 1; i <= 3; i += 1) {
+      const header3 = document.createElement('h3');
+      header3.innerHTML = 'Cabeçalho ' + i;
+      header3.className = 'description';
+      principal.appendChild(header3);
+    }
+
+    principal.removeChild(section2);
+  </script>
+</body>
+
+</html>
