@@ -35,3 +35,5 @@ const decode = (string) => {
 }
 const functions = { encode, decode };
 module.exports = functions;
+
+//Teste se as demais letras/números não são convertidos para cada caso;
