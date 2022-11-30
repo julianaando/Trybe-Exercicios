@@ -65,26 +65,28 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
-
-
 // Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947. Dica: use a função find.
 
 const expectedResult = 'Stephen King';
 const authorBornIn1947 = () => {
-  // escreva aqui o seu código
+  return books.find((book) => book.author.birthYear === 1947).author.name;
 }
+
+// console.log(authorBornIn1947());
 
 // Retorne o nome do livro com menor número de caracteres (menor nome). Dica: use a função forEach.
 
 const expectedResult2 = 'Duna';
 const smallerName = () => {
   let nameBook;
-  // escreva aqui o seu código
-
-  // Variável nameBook que receberá o valor do menor nome;
+  books.forEach((book) => {
+    if (!nameBook || book.name.length < nameBook.length) {
+      nameBook = book.name;
+    }
+  });
   return nameBook;
 }
+// console.log(smallerName());
 
 // Encontre o primeiro livro cujo nome possua 26 caracteres.
 
@@ -100,21 +102,32 @@ const expectedResult3 = {
 };
 
 const getNamedBook = () => {
-  // escreva seu código aqui
+  let nameBook;
+  books.find((book) => {
+    if ( book.name.length === 26) {
+      nameBook = book.name;
+    }
+  });
+  return nameBook;
 }
+// console.log(getNamedBook());
 
 // Faça uma função que retorne true se todas as pessoas autoras tiverem nascido no século XX, ou false, caso contrário. 
 
 const expectedResult4 = false;
 
-function everyoneWasBornOnSecXX() {
-  // escreva seu código aqui
+const everyoneWasBornOnSecXX = () => {
+  return books.every((book) => (
+    book.author.birthYear >= 1901 && book.author.birthYear <= 2000
+  ));
 }
+console.log(everyoneWasBornOnSecXX());
 
-// Faça uma função que retorne true, caso nenhuma pessoa autora tenha nascido no mesmo ano, e false, caso contrário.
+// Faça uma função que retorne true, se algum livro tiver sido lançado na década de 80, e false, caso contrário.
 
-const expectedResult5 = false
+const expectedResult5 = true
 
-function authorUnique() {
-  // escreva seu código aqui
+const someBookWasReleaseOnThe80s = () => {
+  return books.some((book) => book.releaseYear >= 1980 && book.releaseYear <= 1989);
 }
+console.log(someBookWasReleaseOnThe80s());
