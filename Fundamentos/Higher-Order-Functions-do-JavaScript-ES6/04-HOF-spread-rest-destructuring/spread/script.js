@@ -7,7 +7,8 @@ const specialFruit = ['Banana', 'Mexerica', 'Abacaxi'];
 const additionalItens = ['Uva', 'Morango', 'Pêra'];
 
 const fruitSalad = (fruit, additional) => {
-  return favoriteFruits = [...fruit, ...additional];
+  const favoriteFruits = [...fruit, ...additional];
+  return favoriteFruits;
 };
 
 console.log(fruitSalad(specialFruit, additionalItens));
